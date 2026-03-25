@@ -4,24 +4,25 @@ using namespace std;
 
 int main()
 {
-    double grades[100];
+    //double grades[100];
+    int size;
+    cout << "How many grades are you entering" << endl;
+    cin >> size;
+    double * grades = new double[size];
     int count = 0;
     double sum = 0, average, input;
 
-    cout << "Enter your number grades (enter negative value to stop): " << endl;
+    cout << "Enter your number grades: " << endl;
 
-    while (count < 100)
+
+     while (count < size)
     {
         cin >> input;
-
-        if (input < 0)
-        {
-            break;
-        }
         grades[count] = input;
         sum += input;
         count++;
     }
+    
 
     if (count == 0)
     {
